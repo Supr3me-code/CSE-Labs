@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Lab1 Question1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function(){
+		$("#row-one").css("background-color","red");
+		$("#row-two").css("background-color","blue");
+		$("#row-three").css("background-color","red");
+		$("div").css("margin-left","500px");
+		$("button").click(function(){
+		$("div").animate({left:"10px"});
+		});
+	});
+
+	</script>
+</head>
+
+<body>
+	<div>
+		<table style="border: 5px solid;">
+			<tr>
+				<th>Name</th>
+				<th>City</th>
+				<th>Country</th>
+			</tr>
+			<tr id="row-one">
+				<td>Dishant Arora</td>
+				<td>New Delhi</td>
+				<td>India</td>
+			</tr>
+			<tr id="row-two">
+				<td>Touya Nakamoto</td>
+				<td>Kyoto</td>
+				<td>Japan</td>
+			</tr>
+			<tr id="row-three">
+				<td>Dave Freidman</td>
+				<td>New York</td>
+				<td>USA</td>
+			</tr>
+		</table>
+		<img src="supra.jpg" alt="my-img" style="height: 250px; width: 300px;">
+	</div>
+	<button>Click me to animate!</button>
+</body>
+</html>

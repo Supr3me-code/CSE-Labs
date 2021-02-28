@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise Four</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" lang="javascript">
+		$(document).ready(function(){
+			$('#bill').click(function(){
+				var brand_name = $('#brand-choice').val();
+				var qtylap = $('#qtylap').val();
+				var qtymob = $('#qtymob').val();
+				var amt = 0;
+				var pricelap = 0;
+				var pricemob = 1;
+				if(brand_name == 'HP'){
+					if($('#laptop').prop("checked") == true){
+						pricelap = 1000;
+					}
+					if($('#mobile').prop("checked") == true){
+						pricemob = 500;
+					}
+				}
+				else if(brand_name == 'Nokia'){
+					if($('#laptop').prop("checked") == true){
+						pricelap = 250;
+					}
+					if($('#mobile').prop("checked") == true){
+						pricemob = 125;
+					}
+				}
+				else if(brand_name == 'Samsung'){
+					if($('#laptop').prop("checked") == true){
+						pricelap = 2000;
+					}
+					if($('#mobile').prop("checked") == true){
+						pricemob = 1000;
+					}
+				}
+				else if(brand_name == 'Motorola'){
+					if($('#laptop').prop("checked") == true){
+						pricelap = 500;
+					}
+					if($('#mobile').prop("checked") == true){
+						pricemob = 250;
+					}
+				}
+				else{
+					if($('#laptop').prop("checked") == true){
+						pricelap = 10000;
+					}
+					if($('#mobile').prop("checked") == true){
+						pricemob = 5000;
+					}
+				}
+				var n = parseInt(qtylap);
+				var m = parseInt(qtymob);
+				amt = n*pricelap + m*pricemob;
+				alert('Total amount: '+ amt);
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<p>
+	<table>
+		<tr>
+			<th>Brand</th>
+			<th>Laptop</th>
+			<th>Mobile</th>
+		</tr>
+		<tr>
+			<td>HP</td>
+			<td>1000</td>
+			<td>500</td>
+		</tr>
+		<tr>
+			<td>Nokia</td>
+			<td>250</td>
+			<td>125</td>
+		</tr>
+		<tr>
+			<td>Samsung</td>
+			<td>2000</td>
+			<td>1000</td>
+		</tr>
+		<tr>
+			<td>Motorola</td>
+			<td>500</td>
+			<td>250</td>
+		</tr>
+		<tr>
+			<td>Apple</td>
+			<td>10000</td>
+			<td>5000</td>
+		</tr>
+	</table>
+	</p>
+	<label for="brand-choice">Choose a Brand:</label>
+	<input list="brands" id="brand-choice" name="brand-choice" />
+	<datalist id="brands">
+		<option value="HP"></option>
+		<option value="Nokia"></option>
+		<option value="Samsung"></option>
+		<option value="Motorola"></option>
+		<option value="Apple"></option>
+	</datalist>
+	<p>Choose:</p>
+	<div>
+		<input type="checkbox" id="laptop" name="laptop">
+		<label for="laptop">Laptop</label>
+		<input type="checkbox" id="mobile" name="mobile">
+		<label for="mobile">Mobile</label>
+	</div>
+	<br>
+	<div>
+		<label for="qtylap">Quantity of laptops</label>
+		<input type="text" id="qtylap" name="qtylap" required>
+	</div>
+	<br>
+	<div>
+		<label for="qtymob">Quantity of mobiles</label>
+		<input type="text" id="qtymob" name="qtymob" required>
+	</div>
+	<br>
+	<button id="bill">Bill Amount</button>
+</body>
+</html>

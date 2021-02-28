@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q3: Birthday Card using jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" lang="javascript">
+		$(document).ready(function () {
+		$("#btn").click(function () {
+			var bg = $("#colors option:selected").text();
+		$("#div2").css("background-color", bg);
+			var ft = $("#fonts option:selected").text();
+		$("#div2").css("font-family", ft);
+			var fs = parseFloat($("#fsize").val());
+		$("#p2").css("font-size", fs);
+			var bd = $('input[type="radio"]:checked').val();
+		$("#div2").css("border", bd);
+			var txt = $("#txtarea").val();
+		$("#p2").html(txt);
+			var x = $('input[type="checkbox"]:checked').length > 0;
+		if (x) {
+			$("#p3").replaceWith("<img id=\"myimg\" src=\'birthday.jpg\' style='justify-content: center;' height='200px' width='200px'>");
+		}
+		else {
+			$("#p3").replaceWith('<p id="p3"></p>');
+			$("#myimg").replaceWith('<p id="p3"></p>');
+		}
+		});
+		});
+	</script>
+</head>
+
+<body>
+	<div style="width: 50%; background-color: lightgoldenrodyellow">
+		<div style="width: 600px; float: left">
+			<label for="colors">Choose a background color:</label><br>
+			<select name="colors" id="colors">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+			</select>
+
+			<br><br>
+
+			<label for="fonts">Choose a font:</label><br>
+			<select name="fonts" id="fonts">
+				<option value="monospace">Monospace</option>
+				<option value="sans-serif">Sans-Serif</option>
+				<option value="serif">Serif</option>
+				<option value="cursive">Cursive</option>
+			</select>
+
+			<br><br>
+
+			<p>Specify a numeric font size :</p>
+			<input type="number" id="fsize" placeholder="enter only numeric value"/>
+
+			<br><br>
+
+			<label for="borders">Select a border style:</label><br>
+			<input type="radio" name="borders" value="none"/>None<br>
+			<input type="radio" name="borders" value="double"/>Double<br>
+			<input type="radio" name="borders" value="solid"/>Solid<br>
+
+			<br>
+
+			<input type="checkbox" name="check" id="check"/>Add default image<br><br>
+			<p>Enter the greeting text below:</p>
+			<textarea id="txtarea" name="txtarea" rows="4" cols="50"></textarea>
+
+			<br><br>
+
+			<button type="submit" id="btn">Update</button>
+		</div>
+
+		<div id="div2" style="margin-left: 600px; text-align: center; height: 600px; width: 500px;">
+
+			<br /><br />
+
+			<p id="p2"></p>
+	
+			<br /><br />
+
+			<p id="p3"></p>
+
+		</div>
+	</div>
+</body>
+</html>

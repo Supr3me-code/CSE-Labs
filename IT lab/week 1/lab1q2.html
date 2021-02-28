@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Q2: Calculator using jQuery</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" lang="javascript">
+			$(document).ready(function () {
+			$("#1,#2,#3,#4,#5,#6,#7,#8,#9,#0,#add,#subtract,#multiply,#divide,#power,#decimal,#para1,#para2").click(function () {
+			var v = $(this).val();
+			var total = $("textarea").val($("textarea").val() + v);
+			});
+			$("#equal").click(function () {
+			$("textarea").val(eval($("textarea").val()));
+			});
+			$("#clear").click(function () {
+			$("textarea").val("");
+			});
+			$("#backspace").click(function () {
+			$("textarea").val($("textarea").val().substring(0, $("textarea").val().length - 1));
+			});
+		});
+		</script>
+	</head>
+
+<body>
+	<h1>Calculator</h1>
+	<div>
+		<textarea class="#input" value="" rows="10" cols="70" placeholder="Enter Values..."></textarea>
+		<div>
+			<button value="1" id="7" >1</button>
+			<button value="2" id="8" >2</button>
+			<button value="3" id="9" >3</button>
+			<button value="+" id="add">+</button>
+			<button value="" id="clear">Clear</button>
+		</div>
+		<div>
+			<button value="4" id="4" >4</button>
+			<button value="5" id="5" >5</button>
+			<button value="6" id="6" >6</button>
+			<button value="-" id="subtract">-</button>
+			<button value="" id="backspace">&#x2190</button>
+		</div>
+		<div>
+			<button value="7" id="1" >7</button>
+			<button value="8" id="2" >8</button>
+			<button value="9" id="3" >9</button>
+			<button value="*" id="multiply" >x</button>
+			<button value="(" id="para1" >(</button>
+		</div>
+		<div>
+			<button value="=" id="equal" >=</button>
+			<button value="0" id="0" >0</button>
+			<button value="/" id="divide">/</button>
+			<button value=")" id="para1" >)</button>
+			<button value="." id="decimal">.</button>
+		</div>
+	</div>
+</body>
+</html>
