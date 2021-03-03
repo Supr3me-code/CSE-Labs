@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating Student Bio Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel = "stylesheet" href = "styles.css">
+</head>
+<body style = "background-color: floralwhite">
+  <br/>
+  <header class = "jumbotron">
+    <div class = "container">
+      <div class = "row row-header">
+        <h1>Student Bio-Data Form</h1>
+      </div>
+    </div>
+  </header>
+  <br/>
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-12">
+        <h3 >Fill in your details : </h3>
+      </div>
+      <div class = "col-12 col-md-9">
+        <form>
+          <div class = "form-group row">
+            <label for = "firstname" class = "col-md-2 col-form-label">First Name :</label>
+            <div class = "col-md-10">
+                            <input type = "text" class = "form-control" id = "firstname" name = "firstname" placeholder="First Name">
+            </div>
+          </div>
+          <div class = "form-group row">
+                        <label for = "lastname" class = "col-12 col-md-2 col-form-label">Last Name : </label>
+                        <div class = "col-md-10">
+                            <input type = "text" class = "form-control" id = "lastname" name = "lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "fathersname" class = "col-12 col-md-2 col-form-label">Father's First Name : </label>
+                        <div class = "col-md-10">
+                            <input type = "text" class = "form-control" id = "fathersname" name = "fathersname" placeholder="Father's First Name">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "mothersname" class = "col-12 col-md-2 col-form-label">Mother's First Name : </label>
+                        <div class = "col-md-10">
+                            <input type = "text" class = "form-control" id = "mothersname" name = "mothersname" placeholder="Mother's First Name">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "telnum" class = "col-md-2 col-form-label">Contact Number:</label>
+                        <div class = "col-5 col-md-3">
+                            <input type = "text" class = "form-control" id = "countrycode" name = "countrycode" placeholder="Country Code">
+                        </div>
+                        <div class = "col-7 col-md-7">
+                            <input type = "text" class = "form-control" id = "telno" name = "telno" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                        <label for = "emailid" class = "col-md-2 col-form-label">Email ID: </label>
+                        <div class = "col-md-10">
+                            <input type = "text" class = "form-control" id = "emailid" name = "emailid" placeholder="e-mail ID">
+                        </div>
+                    </div>
+                    <div class = "form-group row">
+                      <label for = "gender" class = "col-md-2 col-form-label">Gender : </label>
+                      <div class = "form-check col-md-2">
+                        <input class="form-check-input" type="radio" name="gender" id="male">
+                <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class = "form-check col-md-2">
+                        <input class="form-check-input" type="radio" name="gender" id="female">
+                <label class="form-check-label" for="female">Female</label>
+                    </div>
+                      <div class = "form-check col-md-2">
+                        <input class = "form-check-input" type = "radio" name = "gender" id = "others">
+                        <label class = "form-check-label" for = "others">Others</label>
+                      </div>
+                    </div>
+                    <div class = "form-group row">
+                      <label for = "dob" class="col-md-2 col-form-label">DOB:</label>
+                      <div class = "col-md-5">
+                        <input type = "date" name = "dob" class = "input-field">
+                      </div>
+                    </div>
+                    <div class = "rowTab">
+                      <div class = "labels">
+                        <label for = "language">Languages Known :</label>
+                      </div>
+                      <div class = "rightTab col-md-10">
+                        <ul id = "language" style = "list-style: none;">
+                          <li class="checkbox"><label><input name="prefer" value="english" type="checkbox" class="userRatings"> English</label></li>
+                      <li class="checkbox"><label><input name="prefer" value="hindi" type="checkbox" class="userRatings"> Hindi</label></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class = "form-group row">
+                        <div class = "col-md-5">
+                            <button type = "submit" class = "btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
