@@ -1,0 +1,29 @@
+.row-header{
+
+margin : 0px auto;
+
+padding : 0px 0px;
+
+}
+
+.jumbotron{
+
+margin : 0px auto;
+
+padding : 10px 20px;
+
+background: LightBlue;
+
+}
+
+.row-content {
+
+margin: 0px auto;
+
+padding: 50px 0px;
+
+border-bottom: 1px ridge;
+
+min-height: 400px;
+
+}
